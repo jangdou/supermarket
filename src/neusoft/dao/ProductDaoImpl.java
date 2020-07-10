@@ -2,7 +2,6 @@ package neusoft.dao;
 
 import com.neusoft.util.DBUtil;
 import neusoft.entity.Product_Price;
-import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -16,7 +15,6 @@ public class ProductDaoImpl implements ProductDao{
     private final String USER = "root";
     private final String PASSWORD = "mariadb";
 
-    @Test
     public List<Product_Price> findAllProduct() throws SQLException {
         Connection connection = null;
         Statement statement = null;
