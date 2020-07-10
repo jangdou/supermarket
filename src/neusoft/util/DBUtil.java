@@ -1,0 +1,26 @@
+package neusoft.util;
+import java.sql.*;
+
+public class DBUtil {
+    static {
+        try {
+            Class.forName("org.mariadb.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static Connection getConnection(String DB,String URL, String USER, String PASSWORD) throws SQLException {
+        return DriverManager.getConnection(URL + DB + "?user=" + USER + "&password=" + PASSWORD);
+    }
+
+    public static Connection getConnection(String URL, String USER, String PASSWORD) throws SQLException {
+        return DriverManager.getConnection(URL + "?user=" + USER + "&password=" + PASSWORD);
+    }
+
+    public static Connection getConnection(String URL) throws SQLException {
+        return DriverManager.getConnection(URL);
+    }
+
+}
+
