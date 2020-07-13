@@ -46,12 +46,18 @@ public class ControllerSelect {
         System.out.println("输入结束促销的日期");
         Scanner scanner2=new Scanner(System.in);
         String enddate=scanner1.next();
+        int big=startdate.compareTo(enddate);
+        if(big<0){
             ProductSercive productSercive=new ProductServiceImpl();
             try {
                 productSercive.updateTest(goods,startdate,enddate);
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
+        }else{
+            System.out.println("开始促销时间要小于结束日期");
+        }
+
     }
 
     static void selectprice() {
