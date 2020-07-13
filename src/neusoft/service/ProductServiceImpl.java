@@ -18,8 +18,9 @@ public class ProductServiceImpl implements ProductSercive{
     public int selectProduct(String title) throws SQLException {
         return productDao.selectProduct(title);
     }
-    public void updateTest(String title, String startDate, String endDate) throws SQLException{
 
+    public void updateTest(String title, String startDate, String endDate) throws SQLException {
+        productDao.updateTest(title,startDate,endDate);
     }
     public double selectPrice(String title) throws SQLException{
         return productDao.selectPrice(title);

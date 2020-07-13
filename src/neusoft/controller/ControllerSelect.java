@@ -46,7 +46,6 @@ public class ControllerSelect {
         System.out.println("输入结束促销的日期");
         Scanner scanner2=new Scanner(System.in);
         String enddate=scanner1.next();
-
             ProductSercive productSercive=new ProductServiceImpl();
             try {
                 productSercive.updateTest(goods,startdate,enddate);
